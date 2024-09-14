@@ -1,25 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
+import Game from '../src/Components/Game/Game';
+import { Provider } from 'react-redux';
+import store from '../src/Redux/store';
 import './App.css';
 
-function App() {
-  return (
+const App = () => (
+  <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Memory Match Game</h1>
+      <Game />
     </div>
-  );
-}
+  </Provider>
+);
 
 export default App;
